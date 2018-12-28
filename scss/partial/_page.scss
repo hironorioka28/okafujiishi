@@ -1,0 +1,94 @@
+.page {
+  background-color: $black-d;
+  &__header {
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 2s ease;
+    &--isAdmin {
+      @include mq(wp-semiWide) {
+        top: 46px;
+      }
+      @include mq(wp-wide) {
+        top: 32px;
+      }
+    }
+  }
+  &__main {
+    min-height: calc(100vh - 66px - 180px);
+    &--top {
+      position: relative;
+      top: -96px;
+      @include mq() {
+        top: -66px;
+      }
+    }
+    &--isAdmin {
+      min-height: calc(100vh - 32px - 66px - 180px);
+    }
+  }
+  &__contents {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    &:last-of-type {
+      padding-bottom: 60px;
+    }
+    &--top {
+      height: 100vh;
+      justify-content: center;
+      background: none;
+    }
+    &--detailTop {
+      padding-top: 100px;
+    }
+    &--article {
+      padding: 0 20px 60px;
+      display: block;
+      @include mq() {
+        display: flex;
+      }
+    }
+  }
+  &__content {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    width: 100%;
+    @include mq() {
+      width: 600px;
+      &--card {
+        width: 100%;
+      }
+    }
+    @include mq(pc) {
+      &--card {
+        width: 1280px;
+      }
+    }
+  }
+  &__video {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &__categoryTitle {
+    padding: 0 20px;
+    width: 100%;
+    font: {
+      size: 3.2rem;
+      weight: 300;
+    }
+  }
+  &__footer {
+    margin-top: 100px;
+  }
+}

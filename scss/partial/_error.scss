@@ -1,0 +1,13 @@
+.error {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__text {
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+    font-size: 1.6rem;
+  }
+}

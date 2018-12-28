@@ -1,0 +1,36 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: {
+    family: "Hiragino Mincho ProN", YuMincho, "HGP明朝B", serif;
+    weight: 200;
+  }
+  color: $ofi_textBlack;
+}
+
+a {
+  color: $white-l;
+  text-decoration: none;
+  @include mq() {
+    transition: all .2s ease;
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+button {
+  @include mq() {
+    transition: all .2s ease;
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+img {
+  vertical-align: text-bottom;
+}
+

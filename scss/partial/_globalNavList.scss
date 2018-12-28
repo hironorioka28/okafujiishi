@@ -1,0 +1,21 @@
+.globalNavList {
+  display: flex;
+  list-style-type: none;
+  &__item {
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    &--disabled {
+      pointer-events: none;
+      opacity: .8;
+    }
+    @include mq() {
+      font-size: 2rem;
+    }
+  }
+}

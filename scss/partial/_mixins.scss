@@ -1,0 +1,13 @@
+$bplist: (
+  "tablet": "screen and (min-width: 768px)",
+  "pc": "screen and (min-width: 1280px)",
+
+  "wp-wide": "screen and (min-width: 783px)",
+  "wp-semiWide": "screen and (min-width: 601px)"
+);
+
+@mixin mq($bp: tablet) {
+  @media #{map-get($bplist, $bp)} {
+    @content;
+  }
+}
